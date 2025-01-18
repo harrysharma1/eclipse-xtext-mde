@@ -1,0 +1,13 @@
+grammar harrysharma.brainrot.Brainrot with org.eclipse.xtext.common.Terminals
+
+generate brainrot "http://www.brainrot.harrysharma/Brainrot"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	greeting = TypeOfGreeting name=ID '!';
+	
+enum TypeOfGreeting:
+	hello = 'Hello' | hi = 'Hi'
+;
