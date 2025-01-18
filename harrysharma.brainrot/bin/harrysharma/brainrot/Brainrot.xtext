@@ -3,11 +3,18 @@ grammar harrysharma.brainrot.Brainrot with org.eclipse.xtext.common.Terminals
 generate brainrot "http://www.brainrot.harrysharma/Brainrot"
 
 Model:
-	greetings+=Greeting*;
+	(elements+= Skibidi)*;
+
+Skibidi:
+	Sigma | Rizzler;
+
+Sigma:
+	'rizz' name=ID;
 	
-Greeting:
-	greeting = TypeOfGreeting name=ID '!';
+Rizzler: 
+	'rizz ' name=ID ('extends' superType=[Rizzler])?'{'
+	(toilets+=Toilet)*
+	'}';
 	
-enum TypeOfGreeting:
-	hello = 'Hello' | hi = 'Hi'
-;
+Toilet:
+	(many?='many')? name=ID ':' type=[Skibidi];

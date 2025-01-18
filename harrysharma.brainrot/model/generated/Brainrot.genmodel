@@ -6,16 +6,21 @@
     complianceLevel="11.0" copyrightFields="false" runtimeVersion="2.29">
   <genPackages prefix="Brainrot" basePackage="harrysharma.brainrot" disposableProviderFactory="true"
       fileExtensions="brainrot" ecorePackage="Brainrot.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Brainrot.ecore#//TypeOfGreeting">
-      <genEnumLiterals ecoreEnumLiteral="Brainrot.ecore#//TypeOfGreeting/hello"/>
-      <genEnumLiterals ecoreEnumLiteral="Brainrot.ecore#//TypeOfGreeting/hi"/>
-    </genEnums>
     <genClasses ecoreClass="Brainrot.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Brainrot.ecore#//Model/greetings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Brainrot.ecore#//Model/elements"/>
     </genClasses>
-    <genClasses ecoreClass="Brainrot.ecore#//Greeting">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Brainrot.ecore#//Greeting/greeting"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Brainrot.ecore#//Greeting/name"/>
+    <genClasses ecoreClass="Brainrot.ecore#//Skibidi">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Brainrot.ecore#//Skibidi/name"/>
+    </genClasses>
+    <genClasses ecoreClass="Brainrot.ecore#//Sigma"/>
+    <genClasses ecoreClass="Brainrot.ecore#//Rizzler">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Brainrot.ecore#//Rizzler/superType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Brainrot.ecore#//Rizzler/toilets"/>
+    </genClasses>
+    <genClasses ecoreClass="Brainrot.ecore#//Toilet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Brainrot.ecore#//Toilet/many"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Brainrot.ecore#//Toilet/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Brainrot.ecore#//Toilet/type"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

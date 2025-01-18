@@ -23,7 +23,6 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -79,33 +78,33 @@ ruleModel returns [EObject current=null]
 	(
 		(
 			{
-				newCompositeNode(grammarAccess.getModelAccess().getGreetingsGreetingParserRuleCall_0());
+				newCompositeNode(grammarAccess.getModelAccess().getElementsSkibidiParserRuleCall_0());
 			}
-			lv_greetings_0_0=ruleGreeting
+			lv_elements_0_0=ruleSkibidi
 			{
 				if ($current==null) {
 					$current = createModelElementForParent(grammarAccess.getModelRule());
 				}
 				add(
 					$current,
-					"greetings",
-					lv_greetings_0_0,
-					"harrysharma.brainrot.Brainrot.Greeting");
+					"elements",
+					lv_elements_0_0,
+					"harrysharma.brainrot.Brainrot.Skibidi");
 				afterParserOrEnumRuleCall();
 			}
 		)
 	)*
 ;
 
-// Entry rule entryRuleGreeting
-entryRuleGreeting returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getGreetingRule()); }
-	iv_ruleGreeting=ruleGreeting
-	{ $current=$iv_ruleGreeting.current; }
+// Entry rule entryRuleSkibidi
+entryRuleSkibidi returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSkibidiRule()); }
+	iv_ruleSkibidi=ruleSkibidi
+	{ $current=$iv_ruleSkibidi.current; }
 	EOF;
 
-// Rule Greeting
-ruleGreeting returns [EObject current=null]
+// Rule Skibidi
+ruleSkibidi returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -113,34 +112,55 @@ ruleGreeting returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getGreetingAccess().getGreetingTypeOfGreetingEnumRuleCall_0_0());
-				}
-				lv_greeting_0_0=ruleTypeOfGreeting
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getGreetingRule());
-					}
-					set(
-						$current,
-						"greeting",
-						lv_greeting_0_0,
-						"harrysharma.brainrot.Brainrot.TypeOfGreeting");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
+		{
+			newCompositeNode(grammarAccess.getSkibidiAccess().getSigmaParserRuleCall_0());
+		}
+		this_Sigma_0=ruleSigma
+		{
+			$current = $this_Sigma_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getSkibidiAccess().getRizzlerParserRuleCall_1());
+		}
+		this_Rizzler_1=ruleRizzler
+		{
+			$current = $this_Rizzler_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleSigma
+entryRuleSigma returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getSigmaRule()); }
+	iv_ruleSigma=ruleSigma
+	{ $current=$iv_ruleSigma.current; }
+	EOF;
+
+// Rule Sigma
+ruleSigma returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='rizz'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getSigmaAccess().getRizzKeyword_0());
+		}
 		(
 			(
 				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_1_0, grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getSigmaAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getGreetingRule());
+						$current = createModelElement(grammarAccess.getSigmaRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -150,15 +170,105 @@ ruleGreeting returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_2='!'
+	)
+;
+
+// Entry rule entryRuleRizzler
+entryRuleRizzler returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRizzlerRule()); }
+	iv_ruleRizzler=ruleRizzler
+	{ $current=$iv_ruleRizzler.current; }
+	EOF;
+
+// Rule Rizzler
+ruleRizzler returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='rizz'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getGreetingAccess().getExclamationMarkKeyword_2());
+			newLeafNode(otherlv_0, grammarAccess.getRizzlerAccess().getRizzKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getRizzlerAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRizzlerRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		(
+			otherlv_2='extends'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getRizzlerAccess().getExtendsKeyword_2_0());
+			}
+			(
+				(
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getRizzlerRule());
+						}
+					}
+					otherlv_3=RULE_ID
+					{
+						newLeafNode(otherlv_3, grammarAccess.getRizzlerAccess().getSuperTypeRizzlerCrossReference_2_1_0());
+					}
+				)
+			)
+		)?
+		otherlv_4='{'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getRizzlerAccess().getLeftCurlyBracketKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getRizzlerAccess().getToiletsToiletParserRuleCall_4_0());
+				}
+				lv_toilets_5_0=ruleToilet
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getRizzlerRule());
+					}
+					add(
+						$current,
+						"toilets",
+						lv_toilets_5_0,
+						"harrysharma.brainrot.Brainrot.Toilet");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_6='}'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getRizzlerAccess().getRightCurlyBracketKeyword_5());
 		}
 	)
 ;
 
-// Rule TypeOfGreeting
-ruleTypeOfGreeting returns [Enumerator current=null]
+// Entry rule entryRuleToilet
+entryRuleToilet returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getToiletRule()); }
+	iv_ruleToilet=ruleToilet
+	{ $current=$iv_ruleToilet.current; }
+	EOF;
+
+// Rule Toilet
+ruleToilet returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -167,19 +277,53 @@ ruleTypeOfGreeting returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='Hello'
-			{
-				$current = grammarAccess.getTypeOfGreetingAccess().getHelloEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getTypeOfGreetingAccess().getHelloEnumLiteralDeclaration_0());
-			}
-		)
-		    |
+			(
+				lv_many_0_0='many'
+				{
+					newLeafNode(lv_many_0_0, grammarAccess.getToiletAccess().getManyManyKeyword_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getToiletRule());
+					}
+					setWithLastConsumed($current, "many", lv_many_0_0 != null, "many");
+				}
+			)
+		)?
 		(
-			enumLiteral_1='Hi'
-			{
-				$current = grammarAccess.getTypeOfGreetingAccess().getHiEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getTypeOfGreetingAccess().getHiEnumLiteralDeclaration_1());
-			}
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getToiletAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getToiletRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_2=':'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getToiletAccess().getColonKeyword_2());
+		}
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getToiletRule());
+					}
+				}
+				otherlv_3=RULE_ID
+				{
+					newLeafNode(otherlv_3, grammarAccess.getToiletAccess().getTypeSkibidiCrossReference_3_0());
+				}
+			)
 		)
 	)
 ;

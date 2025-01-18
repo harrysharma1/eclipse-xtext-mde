@@ -33,13 +33,40 @@ public interface BrainrotFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Greeting</em>'.
+   * Returns a new object of class '<em>Skibidi</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Greeting</em>'.
+   * @return a new object of class '<em>Skibidi</em>'.
    * @generated
    */
-  Greeting createGreeting();
+  Skibidi createSkibidi();
+
+  /**
+   * Returns a new object of class '<em>Sigma</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Sigma</em>'.
+   * @generated
+   */
+  Sigma createSigma();
+
+  /**
+   * Returns a new object of class '<em>Rizzler</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Rizzler</em>'.
+   * @generated
+   */
+  Rizzler createRizzler();
+
+  /**
+   * Returns a new object of class '<em>Toilet</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Toilet</em>'.
+   * @generated
+   */
+  Toilet createToilet();
 
   /**
    * Returns the package supported by this factory.

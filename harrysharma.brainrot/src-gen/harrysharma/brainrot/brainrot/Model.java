@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link harrysharma.brainrot.brainrot.Model#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link harrysharma.brainrot.brainrot.Model#getElements <em>Elements</em>}</li>
  * </ul>
  *
  * @see harrysharma.brainrot.brainrot.BrainrotPackage#getModel()
@@ -26,15 +26,15 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Greetings</b></em>' containment reference list.
-   * The list contents are of type {@link harrysharma.brainrot.brainrot.Greeting}.
+   * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
+   * The list contents are of type {@link harrysharma.brainrot.brainrot.Skibidi}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Greetings</em>' containment reference list.
-   * @see harrysharma.brainrot.brainrot.BrainrotPackage#getModel_Greetings()
+   * @return the value of the '<em>Elements</em>' containment reference list.
+   * @see harrysharma.brainrot.brainrot.BrainrotPackage#getModel_Elements()
    * @model containment="true"
    * @generated
    */
-  EList<Greeting> getGreetings();
+  EList<Skibidi> getElements();
 
 } // Model

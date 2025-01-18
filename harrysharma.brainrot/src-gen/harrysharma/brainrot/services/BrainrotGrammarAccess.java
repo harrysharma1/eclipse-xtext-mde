@@ -8,8 +8,7 @@ import com.google.inject.Singleton;
 import java.util.List;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
-import org.eclipse.xtext.EnumLiteralDeclaration;
-import org.eclipse.xtext.EnumRule;
+import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -26,40 +25,90 @@ public class BrainrotGrammarAccess extends AbstractElementFinder.AbstractGrammar
 	
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "harrysharma.brainrot.Brainrot.Model");
-		private final Assignment cGreetingsAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cGreetingsGreetingParserRuleCall_0 = (RuleCall)cGreetingsAssignment.eContents().get(0);
+		private final Assignment cElementsAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cElementsSkibidiParserRuleCall_0 = (RuleCall)cElementsAssignment.eContents().get(0);
 		
 		//Model:
-		//    greetings+=Greeting*;
+		//    (elements+= Skibidi)*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//greetings+=Greeting*
-		public Assignment getGreetingsAssignment() { return cGreetingsAssignment; }
+		//(elements+= Skibidi)*
+		public Assignment getElementsAssignment() { return cElementsAssignment; }
 		
-		//Greeting
-		public RuleCall getGreetingsGreetingParserRuleCall_0() { return cGreetingsGreetingParserRuleCall_0; }
+		//Skibidi
+		public RuleCall getElementsSkibidiParserRuleCall_0() { return cElementsSkibidiParserRuleCall_0; }
 	}
-	public class GreetingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "harrysharma.brainrot.Brainrot.Greeting");
+	public class SkibidiElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "harrysharma.brainrot.Brainrot.Skibidi");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cSigmaParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cRizzlerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//Skibidi:
+		//    Sigma | Rizzler;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Sigma | Rizzler
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//Sigma
+		public RuleCall getSigmaParserRuleCall_0() { return cSigmaParserRuleCall_0; }
+		
+		//Rizzler
+		public RuleCall getRizzlerParserRuleCall_1() { return cRizzlerParserRuleCall_1; }
+	}
+	public class SigmaElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "harrysharma.brainrot.Brainrot.Sigma");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cGreetingAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cGreetingTypeOfGreetingEnumRuleCall_0_0 = (RuleCall)cGreetingAssignment_0.eContents().get(0);
+		private final Keyword cRizzKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cExclamationMarkKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//Greeting:
-		//    greeting = TypeOfGreeting name=ID '!';
+		//Sigma:
+		//    'rizz' name=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//greeting = TypeOfGreeting name=ID '!'
+		//'rizz' name=ID
 		public Group getGroup() { return cGroup; }
 		
-		//greeting = TypeOfGreeting
-		public Assignment getGreetingAssignment_0() { return cGreetingAssignment_0; }
+		//'rizz'
+		public Keyword getRizzKeyword_0() { return cRizzKeyword_0; }
 		
-		//TypeOfGreeting
-		public RuleCall getGreetingTypeOfGreetingEnumRuleCall_0_0() { return cGreetingTypeOfGreetingEnumRuleCall_0_0; }
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+	}
+	public class RizzlerElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "harrysharma.brainrot.Brainrot.Rizzler");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cRizzKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cExtendsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cSuperTypeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final CrossReference cSuperTypeRizzlerCrossReference_2_1_0 = (CrossReference)cSuperTypeAssignment_2_1.eContents().get(0);
+		private final RuleCall cSuperTypeRizzlerIDTerminalRuleCall_2_1_0_1 = (RuleCall)cSuperTypeRizzlerCrossReference_2_1_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cToiletsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cToiletsToiletParserRuleCall_4_0 = (RuleCall)cToiletsAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//Rizzler:
+		//    'rizz' name=ID ('extends' superType=[Rizzler])?'{'
+		//    (toilets+=Toilet)*
+		//    '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'rizz' name=ID ('extends' superType=[Rizzler])?'{'
+		//(toilets+=Toilet)*
+		//'}'
+		public Group getGroup() { return cGroup; }
+		
+		//'rizz'
+		public Keyword getRizzKeyword_0() { return cRizzKeyword_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -67,42 +116,83 @@ public class BrainrotGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		//ID
 		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
 		
-		//'!'
-		public Keyword getExclamationMarkKeyword_2() { return cExclamationMarkKeyword_2; }
+		//('extends' superType=[Rizzler])?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//'extends'
+		public Keyword getExtendsKeyword_2_0() { return cExtendsKeyword_2_0; }
+		
+		//superType=[Rizzler]
+		public Assignment getSuperTypeAssignment_2_1() { return cSuperTypeAssignment_2_1; }
+		
+		//[Rizzler]
+		public CrossReference getSuperTypeRizzlerCrossReference_2_1_0() { return cSuperTypeRizzlerCrossReference_2_1_0; }
+		
+		//ID
+		public RuleCall getSuperTypeRizzlerIDTerminalRuleCall_2_1_0_1() { return cSuperTypeRizzlerIDTerminalRuleCall_2_1_0_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		
+		//(toilets+=Toilet)*
+		public Assignment getToiletsAssignment_4() { return cToiletsAssignment_4; }
+		
+		//Toilet
+		public RuleCall getToiletsToiletParserRuleCall_4_0() { return cToiletsToiletParserRuleCall_4_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
+	public class ToiletElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "harrysharma.brainrot.Brainrot.Toilet");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cManyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cManyManyKeyword_0_0 = (Keyword)cManyAssignment_0.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final CrossReference cTypeSkibidiCrossReference_3_0 = (CrossReference)cTypeAssignment_3.eContents().get(0);
+		private final RuleCall cTypeSkibidiIDTerminalRuleCall_3_0_1 = (RuleCall)cTypeSkibidiCrossReference_3_0.eContents().get(1);
+		
+		//Toilet:
+		//    (many?='many')? name=ID ':' type=[Skibidi];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//(many?='many')? name=ID ':' type=[Skibidi]
+		public Group getGroup() { return cGroup; }
+		
+		//(many?='many')?
+		public Assignment getManyAssignment_0() { return cManyAssignment_0; }
+		
+		//'many'
+		public Keyword getManyManyKeyword_0_0() { return cManyManyKeyword_0_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//':'
+		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
+		
+		//type=[Skibidi]
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
+		
+		//[Skibidi]
+		public CrossReference getTypeSkibidiCrossReference_3_0() { return cTypeSkibidiCrossReference_3_0; }
+		
+		//ID
+		public RuleCall getTypeSkibidiIDTerminalRuleCall_3_0_1() { return cTypeSkibidiIDTerminalRuleCall_3_0_1; }
 	}
 	
-	public class TypeOfGreetingElements extends AbstractElementFinder.AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "harrysharma.brainrot.Brainrot.TypeOfGreeting");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cHelloEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cHelloHelloKeyword_0_0 = (Keyword)cHelloEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cHiEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cHiHiKeyword_1_0 = (Keyword)cHiEnumLiteralDeclaration_1.eContents().get(0);
-		
-		//enum TypeOfGreeting:
-		//    hello = 'Hello' | hi = 'Hi'
-		//;
-		public EnumRule getRule() { return rule; }
-		
-		//hello = 'Hello' | hi = 'Hi'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//hello = 'Hello'
-		public EnumLiteralDeclaration getHelloEnumLiteralDeclaration_0() { return cHelloEnumLiteralDeclaration_0; }
-		
-		//'Hello'
-		public Keyword getHelloHelloKeyword_0_0() { return cHelloHelloKeyword_0_0; }
-		
-		//hi = 'Hi'
-		public EnumLiteralDeclaration getHiEnumLiteralDeclaration_1() { return cHiEnumLiteralDeclaration_1; }
-		
-		//'Hi'
-		public Keyword getHiHiKeyword_1_0() { return cHiHiKeyword_1_0; }
-	}
 	
 	private final ModelElements pModel;
-	private final GreetingElements pGreeting;
-	private final TypeOfGreetingElements eTypeOfGreeting;
+	private final SkibidiElements pSkibidi;
+	private final SigmaElements pSigma;
+	private final RizzlerElements pRizzler;
+	private final ToiletElements pToilet;
 	
 	private final Grammar grammar;
 	
@@ -114,8 +204,10 @@ public class BrainrotGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
-		this.pGreeting = new GreetingElements();
-		this.eTypeOfGreeting = new TypeOfGreetingElements();
+		this.pSkibidi = new SkibidiElements();
+		this.pSigma = new SigmaElements();
+		this.pRizzler = new RizzlerElements();
+		this.pToilet = new ToiletElements();
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -146,7 +238,7 @@ public class BrainrotGrammarAccess extends AbstractElementFinder.AbstractGrammar
 
 	
 	//Model:
-	//    greetings+=Greeting*;
+	//    (elements+= Skibidi)*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -155,25 +247,46 @@ public class BrainrotGrammarAccess extends AbstractElementFinder.AbstractGrammar
 		return getModelAccess().getRule();
 	}
 	
-	//Greeting:
-	//    greeting = TypeOfGreeting name=ID '!';
-	public GreetingElements getGreetingAccess() {
-		return pGreeting;
+	//Skibidi:
+	//    Sigma | Rizzler;
+	public SkibidiElements getSkibidiAccess() {
+		return pSkibidi;
 	}
 	
-	public ParserRule getGreetingRule() {
-		return getGreetingAccess().getRule();
+	public ParserRule getSkibidiRule() {
+		return getSkibidiAccess().getRule();
 	}
 	
-	//enum TypeOfGreeting:
-	//    hello = 'Hello' | hi = 'Hi'
-	//;
-	public TypeOfGreetingElements getTypeOfGreetingAccess() {
-		return eTypeOfGreeting;
+	//Sigma:
+	//    'rizz' name=ID;
+	public SigmaElements getSigmaAccess() {
+		return pSigma;
 	}
 	
-	public EnumRule getTypeOfGreetingRule() {
-		return getTypeOfGreetingAccess().getRule();
+	public ParserRule getSigmaRule() {
+		return getSigmaAccess().getRule();
+	}
+	
+	//Rizzler:
+	//    'rizz' name=ID ('extends' superType=[Rizzler])?'{'
+	//    (toilets+=Toilet)*
+	//    '}';
+	public RizzlerElements getRizzlerAccess() {
+		return pRizzler;
+	}
+	
+	public ParserRule getRizzlerRule() {
+		return getRizzlerAccess().getRule();
+	}
+	
+	//Toilet:
+	//    (many?='many')? name=ID ':' type=[Skibidi];
+	public ToiletElements getToiletAccess() {
+		return pToilet;
+	}
+	
+	public ParserRule getToiletRule() {
+		return getToiletAccess().getRule();
 	}
 	
 	//terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;

@@ -4,8 +4,7 @@
 package harrysharma.brainrot.brainrot.impl;
 
 import harrysharma.brainrot.brainrot.BrainrotPackage;
-import harrysharma.brainrot.brainrot.Greeting;
-import harrysharma.brainrot.brainrot.TypeOfGreeting;
+import harrysharma.brainrot.brainrot.Skibidi;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -16,40 +15,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Greeting</b></em>'.
+ * An implementation of the model object '<em><b>Skibidi</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link harrysharma.brainrot.brainrot.impl.GreetingImpl#getGreeting <em>Greeting</em>}</li>
- *   <li>{@link harrysharma.brainrot.brainrot.impl.GreetingImpl#getName <em>Name</em>}</li>
+ *   <li>{@link harrysharma.brainrot.brainrot.impl.SkibidiImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeting
+public class SkibidiImpl extends MinimalEObjectImpl.Container implements Skibidi
 {
-  /**
-   * The default value of the '{@link #getGreeting() <em>Greeting</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGreeting()
-   * @generated
-   * @ordered
-   */
-  protected static final TypeOfGreeting GREETING_EDEFAULT = TypeOfGreeting.HELLO;
-
-  /**
-   * The cached value of the '{@link #getGreeting() <em>Greeting</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getGreeting()
-   * @generated
-   * @ordered
-   */
-  protected TypeOfGreeting greeting = GREETING_EDEFAULT;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -75,7 +53,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
    * <!-- end-user-doc -->
    * @generated
    */
-  protected GreetingImpl()
+  protected SkibidiImpl()
   {
     super();
   }
@@ -88,32 +66,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   @Override
   protected EClass eStaticClass()
   {
-    return BrainrotPackage.Literals.GREETING;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public TypeOfGreeting getGreeting()
-  {
-    return greeting;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setGreeting(TypeOfGreeting newGreeting)
-  {
-    TypeOfGreeting oldGreeting = greeting;
-    greeting = newGreeting == null ? GREETING_EDEFAULT : newGreeting;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrainrotPackage.GREETING__GREETING, oldGreeting, greeting));
+    return BrainrotPackage.Literals.SKIBIDI;
   }
 
   /**
@@ -138,7 +91,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrainrotPackage.GREETING__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrainrotPackage.SKIBIDI__NAME, oldName, name));
   }
 
   /**
@@ -151,9 +104,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case BrainrotPackage.GREETING__GREETING:
-        return getGreeting();
-      case BrainrotPackage.GREETING__NAME:
+      case BrainrotPackage.SKIBIDI__NAME:
         return getName();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -169,10 +120,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case BrainrotPackage.GREETING__GREETING:
-        setGreeting((TypeOfGreeting)newValue);
-        return;
-      case BrainrotPackage.GREETING__NAME:
+      case BrainrotPackage.SKIBIDI__NAME:
         setName((String)newValue);
         return;
     }
@@ -189,10 +137,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case BrainrotPackage.GREETING__GREETING:
-        setGreeting(GREETING_EDEFAULT);
-        return;
-      case BrainrotPackage.GREETING__NAME:
+      case BrainrotPackage.SKIBIDI__NAME:
         setName(NAME_EDEFAULT);
         return;
     }
@@ -209,9 +154,7 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
   {
     switch (featureID)
     {
-      case BrainrotPackage.GREETING__GREETING:
-        return greeting != GREETING_EDEFAULT;
-      case BrainrotPackage.GREETING__NAME:
+      case BrainrotPackage.SKIBIDI__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
@@ -228,12 +171,10 @@ public class GreetingImpl extends MinimalEObjectImpl.Container implements Greeti
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (greeting: ");
-    result.append(greeting);
-    result.append(", name: ");
+    result.append(" (name: ");
     result.append(name);
     result.append(')');
     return result.toString();
   }
 
-} //GreetingImpl
+} //SkibidiImpl

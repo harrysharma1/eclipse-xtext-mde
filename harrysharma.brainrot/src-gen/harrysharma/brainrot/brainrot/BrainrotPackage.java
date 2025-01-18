@@ -5,7 +5,6 @@ package harrysharma.brainrot.brainrot;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -69,13 +68,13 @@ public interface BrainrotPackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Greetings</b></em>' containment reference list.
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__GREETINGS = 0;
+  int MODEL__ELEMENTS = 0;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -87,23 +86,14 @@ public interface BrainrotPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link harrysharma.brainrot.brainrot.impl.GreetingImpl <em>Greeting</em>}' class.
+   * The meta object id for the '{@link harrysharma.brainrot.brainrot.impl.SkibidiImpl <em>Skibidi</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see harrysharma.brainrot.brainrot.impl.GreetingImpl
-   * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getGreeting()
+   * @see harrysharma.brainrot.brainrot.impl.SkibidiImpl
+   * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getSkibidi()
    * @generated
    */
-  int GREETING = 1;
-
-  /**
-   * The feature id for the '<em><b>Greeting</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GREETING__GREETING = 0;
+  int SKIBIDI = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -112,26 +102,136 @@ public interface BrainrotPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GREETING__NAME = 1;
+  int SKIBIDI__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Greeting</em>' class.
+   * The number of structural features of the '<em>Skibidi</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GREETING_FEATURE_COUNT = 2;
+  int SKIBIDI_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link harrysharma.brainrot.brainrot.TypeOfGreeting <em>Type Of Greeting</em>}' enum.
+   * The meta object id for the '{@link harrysharma.brainrot.brainrot.impl.SigmaImpl <em>Sigma</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see harrysharma.brainrot.brainrot.TypeOfGreeting
-   * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getTypeOfGreeting()
+   * @see harrysharma.brainrot.brainrot.impl.SigmaImpl
+   * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getSigma()
    * @generated
    */
-  int TYPE_OF_GREETING = 2;
+  int SIGMA = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIGMA__NAME = SKIBIDI__NAME;
+
+  /**
+   * The number of structural features of the '<em>Sigma</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SIGMA_FEATURE_COUNT = SKIBIDI_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link harrysharma.brainrot.brainrot.impl.RizzlerImpl <em>Rizzler</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see harrysharma.brainrot.brainrot.impl.RizzlerImpl
+   * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getRizzler()
+   * @generated
+   */
+  int RIZZLER = 3;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIZZLER__NAME = SKIBIDI__NAME;
+
+  /**
+   * The feature id for the '<em><b>Super Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIZZLER__SUPER_TYPE = SKIBIDI_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Toilets</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIZZLER__TOILETS = SKIBIDI_FEATURE_COUNT + 1;
+
+  /**
+   * The number of structural features of the '<em>Rizzler</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RIZZLER_FEATURE_COUNT = SKIBIDI_FEATURE_COUNT + 2;
+
+  /**
+   * The meta object id for the '{@link harrysharma.brainrot.brainrot.impl.ToiletImpl <em>Toilet</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see harrysharma.brainrot.brainrot.impl.ToiletImpl
+   * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getToilet()
+   * @generated
+   */
+  int TOILET = 4;
+
+  /**
+   * The feature id for the '<em><b>Many</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TOILET__MANY = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TOILET__NAME = 1;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TOILET__TYPE = 2;
+
+  /**
+   * The number of structural features of the '<em>Toilet</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TOILET_FEATURE_COUNT = 3;
 
 
   /**
@@ -145,57 +245,121 @@ public interface BrainrotPackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link harrysharma.brainrot.brainrot.Model#getGreetings <em>Greetings</em>}'.
+   * Returns the meta object for the containment reference list '{@link harrysharma.brainrot.brainrot.Model#getElements <em>Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Greetings</em>'.
-   * @see harrysharma.brainrot.brainrot.Model#getGreetings()
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see harrysharma.brainrot.brainrot.Model#getElements()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Greetings();
+  EReference getModel_Elements();
 
   /**
-   * Returns the meta object for class '{@link harrysharma.brainrot.brainrot.Greeting <em>Greeting</em>}'.
+   * Returns the meta object for class '{@link harrysharma.brainrot.brainrot.Skibidi <em>Skibidi</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Greeting</em>'.
-   * @see harrysharma.brainrot.brainrot.Greeting
+   * @return the meta object for class '<em>Skibidi</em>'.
+   * @see harrysharma.brainrot.brainrot.Skibidi
    * @generated
    */
-  EClass getGreeting();
+  EClass getSkibidi();
 
   /**
-   * Returns the meta object for the attribute '{@link harrysharma.brainrot.brainrot.Greeting#getGreeting <em>Greeting</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Greeting</em>'.
-   * @see harrysharma.brainrot.brainrot.Greeting#getGreeting()
-   * @see #getGreeting()
-   * @generated
-   */
-  EAttribute getGreeting_Greeting();
-
-  /**
-   * Returns the meta object for the attribute '{@link harrysharma.brainrot.brainrot.Greeting#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link harrysharma.brainrot.brainrot.Skibidi#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the attribute '<em>Name</em>'.
-   * @see harrysharma.brainrot.brainrot.Greeting#getName()
-   * @see #getGreeting()
+   * @see harrysharma.brainrot.brainrot.Skibidi#getName()
+   * @see #getSkibidi()
    * @generated
    */
-  EAttribute getGreeting_Name();
+  EAttribute getSkibidi_Name();
 
   /**
-   * Returns the meta object for enum '{@link harrysharma.brainrot.brainrot.TypeOfGreeting <em>Type Of Greeting</em>}'.
+   * Returns the meta object for class '{@link harrysharma.brainrot.brainrot.Sigma <em>Sigma</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for enum '<em>Type Of Greeting</em>'.
-   * @see harrysharma.brainrot.brainrot.TypeOfGreeting
+   * @return the meta object for class '<em>Sigma</em>'.
+   * @see harrysharma.brainrot.brainrot.Sigma
    * @generated
    */
-  EEnum getTypeOfGreeting();
+  EClass getSigma();
+
+  /**
+   * Returns the meta object for class '{@link harrysharma.brainrot.brainrot.Rizzler <em>Rizzler</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Rizzler</em>'.
+   * @see harrysharma.brainrot.brainrot.Rizzler
+   * @generated
+   */
+  EClass getRizzler();
+
+  /**
+   * Returns the meta object for the reference '{@link harrysharma.brainrot.brainrot.Rizzler#getSuperType <em>Super Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Super Type</em>'.
+   * @see harrysharma.brainrot.brainrot.Rizzler#getSuperType()
+   * @see #getRizzler()
+   * @generated
+   */
+  EReference getRizzler_SuperType();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link harrysharma.brainrot.brainrot.Rizzler#getToilets <em>Toilets</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Toilets</em>'.
+   * @see harrysharma.brainrot.brainrot.Rizzler#getToilets()
+   * @see #getRizzler()
+   * @generated
+   */
+  EReference getRizzler_Toilets();
+
+  /**
+   * Returns the meta object for class '{@link harrysharma.brainrot.brainrot.Toilet <em>Toilet</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Toilet</em>'.
+   * @see harrysharma.brainrot.brainrot.Toilet
+   * @generated
+   */
+  EClass getToilet();
+
+  /**
+   * Returns the meta object for the attribute '{@link harrysharma.brainrot.brainrot.Toilet#isMany <em>Many</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Many</em>'.
+   * @see harrysharma.brainrot.brainrot.Toilet#isMany()
+   * @see #getToilet()
+   * @generated
+   */
+  EAttribute getToilet_Many();
+
+  /**
+   * Returns the meta object for the attribute '{@link harrysharma.brainrot.brainrot.Toilet#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see harrysharma.brainrot.brainrot.Toilet#getName()
+   * @see #getToilet()
+   * @generated
+   */
+  EAttribute getToilet_Name();
+
+  /**
+   * Returns the meta object for the reference '{@link harrysharma.brainrot.brainrot.Toilet#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Type</em>'.
+   * @see harrysharma.brainrot.brainrot.Toilet#getType()
+   * @see #getToilet()
+   * @generated
+   */
+  EReference getToilet_Type();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -231,30 +395,22 @@ public interface BrainrotPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Greetings</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__GREETINGS = eINSTANCE.getModel_Greetings();
+    EReference MODEL__ELEMENTS = eINSTANCE.getModel_Elements();
 
     /**
-     * The meta object literal for the '{@link harrysharma.brainrot.brainrot.impl.GreetingImpl <em>Greeting</em>}' class.
+     * The meta object literal for the '{@link harrysharma.brainrot.brainrot.impl.SkibidiImpl <em>Skibidi</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see harrysharma.brainrot.brainrot.impl.GreetingImpl
-     * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getGreeting()
+     * @see harrysharma.brainrot.brainrot.impl.SkibidiImpl
+     * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getSkibidi()
      * @generated
      */
-    EClass GREETING = eINSTANCE.getGreeting();
-
-    /**
-     * The meta object literal for the '<em><b>Greeting</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GREETING__GREETING = eINSTANCE.getGreeting_Greeting();
+    EClass SKIBIDI = eINSTANCE.getSkibidi();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -262,17 +418,77 @@ public interface BrainrotPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute GREETING__NAME = eINSTANCE.getGreeting_Name();
+    EAttribute SKIBIDI__NAME = eINSTANCE.getSkibidi_Name();
 
     /**
-     * The meta object literal for the '{@link harrysharma.brainrot.brainrot.TypeOfGreeting <em>Type Of Greeting</em>}' enum.
+     * The meta object literal for the '{@link harrysharma.brainrot.brainrot.impl.SigmaImpl <em>Sigma</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see harrysharma.brainrot.brainrot.TypeOfGreeting
-     * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getTypeOfGreeting()
+     * @see harrysharma.brainrot.brainrot.impl.SigmaImpl
+     * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getSigma()
      * @generated
      */
-    EEnum TYPE_OF_GREETING = eINSTANCE.getTypeOfGreeting();
+    EClass SIGMA = eINSTANCE.getSigma();
+
+    /**
+     * The meta object literal for the '{@link harrysharma.brainrot.brainrot.impl.RizzlerImpl <em>Rizzler</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see harrysharma.brainrot.brainrot.impl.RizzlerImpl
+     * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getRizzler()
+     * @generated
+     */
+    EClass RIZZLER = eINSTANCE.getRizzler();
+
+    /**
+     * The meta object literal for the '<em><b>Super Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RIZZLER__SUPER_TYPE = eINSTANCE.getRizzler_SuperType();
+
+    /**
+     * The meta object literal for the '<em><b>Toilets</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference RIZZLER__TOILETS = eINSTANCE.getRizzler_Toilets();
+
+    /**
+     * The meta object literal for the '{@link harrysharma.brainrot.brainrot.impl.ToiletImpl <em>Toilet</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see harrysharma.brainrot.brainrot.impl.ToiletImpl
+     * @see harrysharma.brainrot.brainrot.impl.BrainrotPackageImpl#getToilet()
+     * @generated
+     */
+    EClass TOILET = eINSTANCE.getToilet();
+
+    /**
+     * The meta object literal for the '<em><b>Many</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TOILET__MANY = eINSTANCE.getToilet_Many();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TOILET__NAME = eINSTANCE.getToilet_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TOILET__TYPE = eINSTANCE.getToilet_Type();
 
   }
 

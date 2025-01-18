@@ -31,11 +31,19 @@ public class BrainrotParser extends AbstractContentAssistParser {
 		}
 		
 		private static void init(ImmutableMap.Builder<AbstractElement, String> builder, BrainrotGrammarAccess grammarAccess) {
-			builder.put(grammarAccess.getTypeOfGreetingAccess().getAlternatives(), "rule__TypeOfGreeting__Alternatives");
-			builder.put(grammarAccess.getGreetingAccess().getGroup(), "rule__Greeting__Group__0");
-			builder.put(grammarAccess.getModelAccess().getGreetingsAssignment(), "rule__Model__GreetingsAssignment");
-			builder.put(grammarAccess.getGreetingAccess().getGreetingAssignment_0(), "rule__Greeting__GreetingAssignment_0");
-			builder.put(grammarAccess.getGreetingAccess().getNameAssignment_1(), "rule__Greeting__NameAssignment_1");
+			builder.put(grammarAccess.getSkibidiAccess().getAlternatives(), "rule__Skibidi__Alternatives");
+			builder.put(grammarAccess.getSigmaAccess().getGroup(), "rule__Sigma__Group__0");
+			builder.put(grammarAccess.getRizzlerAccess().getGroup(), "rule__Rizzler__Group__0");
+			builder.put(grammarAccess.getRizzlerAccess().getGroup_2(), "rule__Rizzler__Group_2__0");
+			builder.put(grammarAccess.getToiletAccess().getGroup(), "rule__Toilet__Group__0");
+			builder.put(grammarAccess.getModelAccess().getElementsAssignment(), "rule__Model__ElementsAssignment");
+			builder.put(grammarAccess.getSigmaAccess().getNameAssignment_1(), "rule__Sigma__NameAssignment_1");
+			builder.put(grammarAccess.getRizzlerAccess().getNameAssignment_1(), "rule__Rizzler__NameAssignment_1");
+			builder.put(grammarAccess.getRizzlerAccess().getSuperTypeAssignment_2_1(), "rule__Rizzler__SuperTypeAssignment_2_1");
+			builder.put(grammarAccess.getRizzlerAccess().getToiletsAssignment_4(), "rule__Rizzler__ToiletsAssignment_4");
+			builder.put(grammarAccess.getToiletAccess().getManyAssignment_0(), "rule__Toilet__ManyAssignment_0");
+			builder.put(grammarAccess.getToiletAccess().getNameAssignment_1(), "rule__Toilet__NameAssignment_1");
+			builder.put(grammarAccess.getToiletAccess().getTypeAssignment_3(), "rule__Toilet__TypeAssignment_3");
 		}
 	}
 	

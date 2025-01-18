@@ -81,9 +81,24 @@ public class BrainrotAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
-      public Adapter caseGreeting(Greeting object)
+      public Adapter caseSkibidi(Skibidi object)
       {
-        return createGreetingAdapter();
+        return createSkibidiAdapter();
+      }
+      @Override
+      public Adapter caseSigma(Sigma object)
+      {
+        return createSigmaAdapter();
+      }
+      @Override
+      public Adapter caseRizzler(Rizzler object)
+      {
+        return createRizzlerAdapter();
+      }
+      @Override
+      public Adapter caseToilet(Toilet object)
+      {
+        return createToiletAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -123,16 +138,61 @@ public class BrainrotAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link harrysharma.brainrot.brainrot.Greeting <em>Greeting</em>}'.
+   * Creates a new adapter for an object of class '{@link harrysharma.brainrot.brainrot.Skibidi <em>Skibidi</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see harrysharma.brainrot.brainrot.Greeting
+   * @see harrysharma.brainrot.brainrot.Skibidi
    * @generated
    */
-  public Adapter createGreetingAdapter()
+  public Adapter createSkibidiAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link harrysharma.brainrot.brainrot.Sigma <em>Sigma</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see harrysharma.brainrot.brainrot.Sigma
+   * @generated
+   */
+  public Adapter createSigmaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link harrysharma.brainrot.brainrot.Rizzler <em>Rizzler</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see harrysharma.brainrot.brainrot.Rizzler
+   * @generated
+   */
+  public Adapter createRizzlerAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link harrysharma.brainrot.brainrot.Toilet <em>Toilet</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see harrysharma.brainrot.brainrot.Toilet
+   * @generated
+   */
+  public Adapter createToiletAdapter()
   {
     return null;
   }

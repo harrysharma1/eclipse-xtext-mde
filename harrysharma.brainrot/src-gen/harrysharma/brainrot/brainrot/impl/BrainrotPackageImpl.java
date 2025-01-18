@@ -5,13 +5,14 @@ package harrysharma.brainrot.brainrot.impl;
 
 import harrysharma.brainrot.brainrot.BrainrotFactory;
 import harrysharma.brainrot.brainrot.BrainrotPackage;
-import harrysharma.brainrot.brainrot.Greeting;
 import harrysharma.brainrot.brainrot.Model;
-import harrysharma.brainrot.brainrot.TypeOfGreeting;
+import harrysharma.brainrot.brainrot.Rizzler;
+import harrysharma.brainrot.brainrot.Sigma;
+import harrysharma.brainrot.brainrot.Skibidi;
+import harrysharma.brainrot.brainrot.Toilet;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -37,14 +38,28 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass greetingEClass = null;
+  private EClass skibidiEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EEnum typeOfGreetingEEnum = null;
+  private EClass sigmaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rizzlerEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass toiletEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -125,7 +140,7 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
    * @generated
    */
   @Override
-  public EReference getModel_Greetings()
+  public EReference getModel_Elements()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
   }
@@ -136,9 +151,9 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
    * @generated
    */
   @Override
-  public EClass getGreeting()
+  public EClass getSkibidi()
   {
-    return greetingEClass;
+    return skibidiEClass;
   }
 
   /**
@@ -147,9 +162,9 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
    * @generated
    */
   @Override
-  public EAttribute getGreeting_Greeting()
+  public EAttribute getSkibidi_Name()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)skibidiEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -158,9 +173,9 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
    * @generated
    */
   @Override
-  public EAttribute getGreeting_Name()
+  public EClass getSigma()
   {
-    return (EAttribute)greetingEClass.getEStructuralFeatures().get(1);
+    return sigmaEClass;
   }
 
   /**
@@ -169,9 +184,75 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
    * @generated
    */
   @Override
-  public EEnum getTypeOfGreeting()
+  public EClass getRizzler()
   {
-    return typeOfGreetingEEnum;
+    return rizzlerEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getRizzler_SuperType()
+  {
+    return (EReference)rizzlerEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getRizzler_Toilets()
+  {
+    return (EReference)rizzlerEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getToilet()
+  {
+    return toiletEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getToilet_Many()
+  {
+    return (EAttribute)toiletEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getToilet_Name()
+  {
+    return (EAttribute)toiletEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getToilet_Type()
+  {
+    return (EReference)toiletEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -206,14 +287,21 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__GREETINGS);
+    createEReference(modelEClass, MODEL__ELEMENTS);
 
-    greetingEClass = createEClass(GREETING);
-    createEAttribute(greetingEClass, GREETING__GREETING);
-    createEAttribute(greetingEClass, GREETING__NAME);
+    skibidiEClass = createEClass(SKIBIDI);
+    createEAttribute(skibidiEClass, SKIBIDI__NAME);
 
-    // Create enums
-    typeOfGreetingEEnum = createEEnum(TYPE_OF_GREETING);
+    sigmaEClass = createEClass(SIGMA);
+
+    rizzlerEClass = createEClass(RIZZLER);
+    createEReference(rizzlerEClass, RIZZLER__SUPER_TYPE);
+    createEReference(rizzlerEClass, RIZZLER__TOILETS);
+
+    toiletEClass = createEClass(TOILET);
+    createEAttribute(toiletEClass, TOILET__MANY);
+    createEAttribute(toiletEClass, TOILET__NAME);
+    createEReference(toiletEClass, TOILET__TYPE);
   }
 
   /**
@@ -245,19 +333,26 @@ public class BrainrotPackageImpl extends EPackageImpl implements BrainrotPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    sigmaEClass.getESuperTypes().add(this.getSkibidi());
+    rizzlerEClass.getESuperTypes().add(this.getSkibidi());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Greetings(), this.getGreeting(), null, "greetings", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Elements(), this.getSkibidi(), null, "elements", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getGreeting_Greeting(), this.getTypeOfGreeting(), "greeting", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(skibidiEClass, Skibidi.class, "Skibidi", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getSkibidi_Name(), ecorePackage.getEString(), "name", null, 0, 1, Skibidi.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    // Initialize enums and add enum literals
-    initEEnum(typeOfGreetingEEnum, TypeOfGreeting.class, "TypeOfGreeting");
-    addEEnumLiteral(typeOfGreetingEEnum, TypeOfGreeting.HELLO);
-    addEEnumLiteral(typeOfGreetingEEnum, TypeOfGreeting.HI);
+    initEClass(sigmaEClass, Sigma.class, "Sigma", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(rizzlerEClass, Rizzler.class, "Rizzler", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRizzler_SuperType(), this.getRizzler(), null, "superType", null, 0, 1, Rizzler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRizzler_Toilets(), this.getToilet(), null, "toilets", null, 0, -1, Rizzler.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(toiletEClass, Toilet.class, "Toilet", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getToilet_Many(), ecorePackage.getEBoolean(), "many", null, 0, 1, Toilet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getToilet_Name(), ecorePackage.getEString(), "name", null, 0, 1, Toilet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getToilet_Type(), this.getSkibidi(), null, "type", null, 0, 1, Toilet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

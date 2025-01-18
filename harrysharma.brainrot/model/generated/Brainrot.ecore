@@ -2,15 +2,21 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="brainrot" nsURI="http://www.brainrot.harrysharma/Brainrot" nsPrefix="brainrot">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="greetings" upperBound="-1"
-        eType="#//Greeting" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//Skibidi" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Greeting">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="greeting" eType="#//TypeOfGreeting"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Skibidi">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="TypeOfGreeting">
-    <eLiterals name="hello" literal="Hello"/>
-    <eLiterals name="hi" value="1" literal="Hi"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Sigma" eSuperTypes="#//Skibidi"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Rizzler" eSuperTypes="#//Skibidi">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="superType" eType="#//Rizzler"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="toilets" upperBound="-1"
+        eType="#//Toilet" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Toilet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="many" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Skibidi"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -80,10 +80,33 @@ public class BrainrotSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BrainrotPackage.GREETING:
+      case BrainrotPackage.SKIBIDI:
       {
-        Greeting greeting = (Greeting)theEObject;
-        T result = caseGreeting(greeting);
+        Skibidi skibidi = (Skibidi)theEObject;
+        T result = caseSkibidi(skibidi);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrainrotPackage.SIGMA:
+      {
+        Sigma sigma = (Sigma)theEObject;
+        T result = caseSigma(sigma);
+        if (result == null) result = caseSkibidi(sigma);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrainrotPackage.RIZZLER:
+      {
+        Rizzler rizzler = (Rizzler)theEObject;
+        T result = caseRizzler(rizzler);
+        if (result == null) result = caseSkibidi(rizzler);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrainrotPackage.TOILET:
+      {
+        Toilet toilet = (Toilet)theEObject;
+        T result = caseToilet(toilet);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -108,17 +131,65 @@ public class BrainrotSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Skibidi</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Greeting</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Skibidi</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseGreeting(Greeting object)
+  public T caseSkibidi(Skibidi object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Sigma</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Sigma</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSigma(Sigma object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Rizzler</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Rizzler</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRizzler(Rizzler object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Toilet</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Toilet</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseToilet(Toilet object)
   {
     return null;
   }

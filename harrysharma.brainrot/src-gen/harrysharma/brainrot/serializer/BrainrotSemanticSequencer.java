@@ -5,8 +5,10 @@ package harrysharma.brainrot.serializer;
 
 import com.google.inject.Inject;
 import harrysharma.brainrot.brainrot.BrainrotPackage;
-import harrysharma.brainrot.brainrot.Greeting;
 import harrysharma.brainrot.brainrot.Model;
+import harrysharma.brainrot.brainrot.Rizzler;
+import harrysharma.brainrot.brainrot.Sigma;
+import harrysharma.brainrot.brainrot.Toilet;
 import harrysharma.brainrot.services.BrainrotGrammarAccess;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -33,11 +35,17 @@ public class BrainrotSemanticSequencer extends AbstractDelegatingSemanticSequenc
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == BrainrotPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case BrainrotPackage.GREETING:
-				sequence_Greeting(context, (Greeting) semanticObject); 
-				return; 
 			case BrainrotPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
+				return; 
+			case BrainrotPackage.RIZZLER:
+				sequence_Rizzler(context, (Rizzler) semanticObject); 
+				return; 
+			case BrainrotPackage.SIGMA:
+				sequence_Sigma(context, (Sigma) semanticObject); 
+				return; 
+			case BrainrotPackage.TOILET:
+				sequence_Toilet(context, (Toilet) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -47,22 +55,49 @@ public class BrainrotSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Greeting returns Greeting
+	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     (greeting=TypeOfGreeting name=ID)
+	 *     elements+=Skibidi+
 	 * </pre>
 	 */
-	protected void sequence_Greeting(ISerializationContext context, Greeting semanticObject) {
+	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Skibidi returns Rizzler
+	 *     Rizzler returns Rizzler
+	 *
+	 * Constraint:
+	 *     (name=ID superType=[Rizzler|ID]? toilets+=Toilet*)
+	 * </pre>
+	 */
+	protected void sequence_Rizzler(ISerializationContext context, Rizzler semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * <pre>
+	 * Contexts:
+	 *     Skibidi returns Sigma
+	 *     Sigma returns Sigma
+	 *
+	 * Constraint:
+	 *     name=ID
+	 * </pre>
+	 */
+	protected void sequence_Sigma(ISerializationContext context, Sigma semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BrainrotPackage.Literals.GREETING__GREETING) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrainrotPackage.Literals.GREETING__GREETING));
-			if (transientValues.isValueTransient(semanticObject, BrainrotPackage.Literals.GREETING__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrainrotPackage.Literals.GREETING__NAME));
+			if (transientValues.isValueTransient(semanticObject, BrainrotPackage.Literals.SKIBIDI__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrainrotPackage.Literals.SKIBIDI__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getGreetingAccess().getGreetingTypeOfGreetingEnumRuleCall_0_0(), semanticObject.getGreeting());
-		feeder.accept(grammarAccess.getGreetingAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getSigmaAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -70,13 +105,13 @@ public class BrainrotSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	/**
 	 * <pre>
 	 * Contexts:
-	 *     Model returns Model
+	 *     Toilet returns Toilet
 	 *
 	 * Constraint:
-	 *     greetings+=Greeting+
+	 *     (many?='many'? name=ID type=[Skibidi|ID])
 	 * </pre>
 	 */
-	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
+	protected void sequence_Toilet(ISerializationContext context, Toilet semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -6,7 +6,6 @@ package harrysharma.brainrot.brainrot.impl;
 import harrysharma.brainrot.brainrot.*;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -67,43 +66,12 @@ public class BrainrotFactoryImpl extends EFactoryImpl implements BrainrotFactory
     switch (eClass.getClassifierID())
     {
       case BrainrotPackage.MODEL: return createModel();
-      case BrainrotPackage.GREETING: return createGreeting();
+      case BrainrotPackage.SKIBIDI: return createSkibidi();
+      case BrainrotPackage.SIGMA: return createSigma();
+      case BrainrotPackage.RIZZLER: return createRizzler();
+      case BrainrotPackage.TOILET: return createToilet();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
-    }
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Object createFromString(EDataType eDataType, String initialValue)
-  {
-    switch (eDataType.getClassifierID())
-    {
-      case BrainrotPackage.TYPE_OF_GREETING:
-        return createTypeOfGreetingFromString(eDataType, initialValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
-    }
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String convertToString(EDataType eDataType, Object instanceValue)
-  {
-    switch (eDataType.getClassifierID())
-    {
-      case BrainrotPackage.TYPE_OF_GREETING:
-        return convertTypeOfGreetingToString(eDataType, instanceValue);
-      default:
-        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
   }
 
@@ -125,10 +93,10 @@ public class BrainrotFactoryImpl extends EFactoryImpl implements BrainrotFactory
    * @generated
    */
   @Override
-  public Greeting createGreeting()
+  public Skibidi createSkibidi()
   {
-    GreetingImpl greeting = new GreetingImpl();
-    return greeting;
+    SkibidiImpl skibidi = new SkibidiImpl();
+    return skibidi;
   }
 
   /**
@@ -136,11 +104,11 @@ public class BrainrotFactoryImpl extends EFactoryImpl implements BrainrotFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public TypeOfGreeting createTypeOfGreetingFromString(EDataType eDataType, String initialValue)
+  @Override
+  public Sigma createSigma()
   {
-    TypeOfGreeting result = TypeOfGreeting.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
+    SigmaImpl sigma = new SigmaImpl();
+    return sigma;
   }
 
   /**
@@ -148,9 +116,23 @@ public class BrainrotFactoryImpl extends EFactoryImpl implements BrainrotFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public String convertTypeOfGreetingToString(EDataType eDataType, Object instanceValue)
+  @Override
+  public Rizzler createRizzler()
   {
-    return instanceValue == null ? null : instanceValue.toString();
+    RizzlerImpl rizzler = new RizzlerImpl();
+    return rizzler;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Toilet createToilet()
+  {
+    ToiletImpl toilet = new ToiletImpl();
+    return toilet;
   }
 
   /**

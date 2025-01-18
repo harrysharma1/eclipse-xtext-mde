@@ -17,11 +17,14 @@ public class InternalBrainrotLexer extends Lexer {
     public static final int RULE_STRING=6;
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_SL_COMMENT=8;
+    public static final int T__15=15;
+    public static final int T__16=16;
     public static final int RULE_INT=5;
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
     public static final int T__12=12;
     public static final int T__13=13;
+    public static final int T__14=14;
     public static final int EOF=-1;
 
     // delegates
@@ -42,10 +45,11 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = T__11;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:11:7: ( '!' )
-            // InternalBrainrot.g:11:9: '!'
+            // InternalBrainrot.g:11:7: ( 'rizz' )
+            // InternalBrainrot.g:11:9: 'rizz'
             {
-            match('!'); 
+            match("rizz"); 
+
 
             }
 
@@ -62,10 +66,10 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:12:7: ( 'Hello' )
-            // InternalBrainrot.g:12:9: 'Hello'
+            // InternalBrainrot.g:12:7: ( 'extends' )
+            // InternalBrainrot.g:12:9: 'extends'
             {
-            match("Hello"); 
+            match("extends"); 
 
 
             }
@@ -83,11 +87,10 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:13:7: ( 'Hi' )
-            // InternalBrainrot.g:13:9: 'Hi'
+            // InternalBrainrot.g:13:7: ( '{' )
+            // InternalBrainrot.g:13:9: '{'
             {
-            match("Hi"); 
-
+            match('{'); 
 
             }
 
@@ -99,15 +102,76 @@ public class InternalBrainrotLexer extends Lexer {
     }
     // $ANTLR end "T__13"
 
+    // $ANTLR start "T__14"
+    public final void mT__14() throws RecognitionException {
+        try {
+            int _type = T__14;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBrainrot.g:14:7: ( '}' )
+            // InternalBrainrot.g:14:9: '}'
+            {
+            match('}'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__14"
+
+    // $ANTLR start "T__15"
+    public final void mT__15() throws RecognitionException {
+        try {
+            int _type = T__15;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBrainrot.g:15:7: ( 'many' )
+            // InternalBrainrot.g:15:9: 'many'
+            {
+            match("many"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__15"
+
+    // $ANTLR start "T__16"
+    public final void mT__16() throws RecognitionException {
+        try {
+            int _type = T__16;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // InternalBrainrot.g:16:7: ( ':' )
+            // InternalBrainrot.g:16:9: ':'
+            {
+            match(':'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__16"
+
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:187:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // InternalBrainrot.g:187:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBrainrot.g:331:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // InternalBrainrot.g:331:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // InternalBrainrot.g:187:11: ( '^' )?
+            // InternalBrainrot.g:331:11: ( '^' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -116,7 +180,7 @@ public class InternalBrainrotLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // InternalBrainrot.g:187:11: '^'
+                    // InternalBrainrot.g:331:11: '^'
                     {
                     match('^'); 
 
@@ -134,7 +198,7 @@ public class InternalBrainrotLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // InternalBrainrot.g:187:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // InternalBrainrot.g:331:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
@@ -183,10 +247,10 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:189:10: ( ( '0' .. '9' )+ )
-            // InternalBrainrot.g:189:12: ( '0' .. '9' )+
+            // InternalBrainrot.g:333:10: ( ( '0' .. '9' )+ )
+            // InternalBrainrot.g:333:12: ( '0' .. '9' )+
             {
-            // InternalBrainrot.g:189:12: ( '0' .. '9' )+
+            // InternalBrainrot.g:333:12: ( '0' .. '9' )+
             int cnt3=0;
             loop3:
             do {
@@ -200,7 +264,7 @@ public class InternalBrainrotLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // InternalBrainrot.g:189:13: '0' .. '9'
+            	    // InternalBrainrot.g:333:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -232,10 +296,10 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:191:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // InternalBrainrot.g:191:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBrainrot.g:335:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // InternalBrainrot.g:335:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // InternalBrainrot.g:191:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // InternalBrainrot.g:335:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt6=2;
             int LA6_0 = input.LA(1);
 
@@ -253,10 +317,10 @@ public class InternalBrainrotLexer extends Lexer {
             }
             switch (alt6) {
                 case 1 :
-                    // InternalBrainrot.g:191:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // InternalBrainrot.g:335:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // InternalBrainrot.g:191:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // InternalBrainrot.g:335:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -272,7 +336,7 @@ public class InternalBrainrotLexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // InternalBrainrot.g:191:21: '\\\\' .
+                    	    // InternalBrainrot.g:335:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -280,7 +344,7 @@ public class InternalBrainrotLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalBrainrot.g:191:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // InternalBrainrot.g:335:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -305,10 +369,10 @@ public class InternalBrainrotLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // InternalBrainrot.g:191:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // InternalBrainrot.g:335:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // InternalBrainrot.g:191:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // InternalBrainrot.g:335:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -324,7 +388,7 @@ public class InternalBrainrotLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // InternalBrainrot.g:191:54: '\\\\' .
+                    	    // InternalBrainrot.g:335:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -332,7 +396,7 @@ public class InternalBrainrotLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // InternalBrainrot.g:191:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // InternalBrainrot.g:335:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -375,12 +439,12 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:193:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // InternalBrainrot.g:193:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // InternalBrainrot.g:337:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // InternalBrainrot.g:337:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // InternalBrainrot.g:193:24: ( options {greedy=false; } : . )*
+            // InternalBrainrot.g:337:24: ( options {greedy=false; } : . )*
             loop7:
             do {
                 int alt7=2;
@@ -405,7 +469,7 @@ public class InternalBrainrotLexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // InternalBrainrot.g:193:52: .
+            	    // InternalBrainrot.g:337:52: .
             	    {
             	    matchAny(); 
 
@@ -435,12 +499,12 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:195:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // InternalBrainrot.g:195:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // InternalBrainrot.g:339:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // InternalBrainrot.g:339:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // InternalBrainrot.g:195:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // InternalBrainrot.g:339:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop8:
             do {
                 int alt8=2;
@@ -453,7 +517,7 @@ public class InternalBrainrotLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // InternalBrainrot.g:195:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // InternalBrainrot.g:339:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -473,7 +537,7 @@ public class InternalBrainrotLexer extends Lexer {
                 }
             } while (true);
 
-            // InternalBrainrot.g:195:40: ( ( '\\r' )? '\\n' )?
+            // InternalBrainrot.g:339:40: ( ( '\\r' )? '\\n' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -482,9 +546,9 @@ public class InternalBrainrotLexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // InternalBrainrot.g:195:41: ( '\\r' )? '\\n'
+                    // InternalBrainrot.g:339:41: ( '\\r' )? '\\n'
                     {
-                    // InternalBrainrot.g:195:41: ( '\\r' )?
+                    // InternalBrainrot.g:339:41: ( '\\r' )?
                     int alt9=2;
                     int LA9_0 = input.LA(1);
 
@@ -493,7 +557,7 @@ public class InternalBrainrotLexer extends Lexer {
                     }
                     switch (alt9) {
                         case 1 :
-                            // InternalBrainrot.g:195:41: '\\r'
+                            // InternalBrainrot.g:339:41: '\\r'
                             {
                             match('\r'); 
 
@@ -525,10 +589,10 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:197:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // InternalBrainrot.g:197:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBrainrot.g:341:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // InternalBrainrot.g:341:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // InternalBrainrot.g:197:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // InternalBrainrot.g:341:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt11=0;
             loop11:
             do {
@@ -582,8 +646,8 @@ public class InternalBrainrotLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // InternalBrainrot.g:199:16: ( . )
-            // InternalBrainrot.g:199:18: .
+            // InternalBrainrot.g:343:16: ( . )
+            // InternalBrainrot.g:343:18: .
             {
             matchAny(); 
 
@@ -598,8 +662,8 @@ public class InternalBrainrotLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // InternalBrainrot.g:1:8: ( T__11 | T__12 | T__13 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt12=10;
+        // InternalBrainrot.g:1:8: ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt12=13;
         alt12 = dfa12.predict(input);
         switch (alt12) {
             case 1 :
@@ -624,49 +688,70 @@ public class InternalBrainrotLexer extends Lexer {
                 }
                 break;
             case 4 :
-                // InternalBrainrot.g:1:28: RULE_ID
+                // InternalBrainrot.g:1:28: T__14
+                {
+                mT__14(); 
+
+                }
+                break;
+            case 5 :
+                // InternalBrainrot.g:1:34: T__15
+                {
+                mT__15(); 
+
+                }
+                break;
+            case 6 :
+                // InternalBrainrot.g:1:40: T__16
+                {
+                mT__16(); 
+
+                }
+                break;
+            case 7 :
+                // InternalBrainrot.g:1:46: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 5 :
-                // InternalBrainrot.g:1:36: RULE_INT
+            case 8 :
+                // InternalBrainrot.g:1:54: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 6 :
-                // InternalBrainrot.g:1:45: RULE_STRING
+            case 9 :
+                // InternalBrainrot.g:1:63: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 7 :
-                // InternalBrainrot.g:1:57: RULE_ML_COMMENT
+            case 10 :
+                // InternalBrainrot.g:1:75: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 8 :
-                // InternalBrainrot.g:1:73: RULE_SL_COMMENT
+            case 11 :
+                // InternalBrainrot.g:1:91: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 9 :
-                // InternalBrainrot.g:1:89: RULE_WS
+            case 12 :
+                // InternalBrainrot.g:1:107: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 10 :
-                // InternalBrainrot.g:1:97: RULE_ANY_OTHER
+            case 13 :
+                // InternalBrainrot.g:1:115: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -680,42 +765,56 @@ public class InternalBrainrotLexer extends Lexer {
 
     protected DFA12 dfa12 = new DFA12(this);
     static final String DFA12_eotS =
-        "\2\uffff\1\16\1\12\2\uffff\3\12\3\uffff\1\16\1\25\6\uffff\1\16\1\uffff\1\16\1\30\1\uffff";
+        "\1\uffff\2\20\2\uffff\1\20\1\uffff\1\16\2\uffff\3\16\2\uffff\1\20\1\uffff\1\20\2\uffff\1\20\6\uffff\3\20\1\41\1\20\1\43\1\uffff\1\20\1\uffff\1\20\1\46\1\uffff";
     static final String DFA12_eofS =
-        "\31\uffff";
+        "\47\uffff";
     static final String DFA12_minS =
-        "\1\0\1\uffff\1\145\1\101\2\uffff\2\0\1\52\3\uffff\1\154\1\60\6\uffff\1\154\1\uffff\1\157\1\60\1\uffff";
+        "\1\0\1\151\1\170\2\uffff\1\141\1\uffff\1\101\2\uffff\2\0\1\52\2\uffff\1\172\1\uffff\1\164\2\uffff\1\156\6\uffff\1\172\1\145\1\171\1\60\1\156\1\60\1\uffff\1\144\1\uffff\1\163\1\60\1\uffff";
     static final String DFA12_maxS =
-        "\1\uffff\1\uffff\1\151\1\172\2\uffff\2\uffff\1\57\3\uffff\1\154\1\172\6\uffff\1\154\1\uffff\1\157\1\172\1\uffff";
+        "\1\uffff\1\151\1\170\2\uffff\1\141\1\uffff\1\172\2\uffff\2\uffff\1\57\2\uffff\1\172\1\uffff\1\164\2\uffff\1\156\6\uffff\1\172\1\145\1\171\1\172\1\156\1\172\1\uffff\1\144\1\uffff\1\163\1\172\1\uffff";
     static final String DFA12_acceptS =
-        "\1\uffff\1\1\2\uffff\1\4\1\5\3\uffff\1\11\1\12\1\1\2\uffff\1\4\1\5\1\6\1\7\1\10\1\11\1\uffff\1\3\2\uffff\1\2";
+        "\3\uffff\1\3\1\4\1\uffff\1\6\1\uffff\1\7\1\10\3\uffff\1\14\1\15\1\uffff\1\7\1\uffff\1\3\1\4\1\uffff\1\6\1\10\1\11\1\12\1\13\1\14\6\uffff\1\1\1\uffff\1\5\2\uffff\1\2";
     static final String DFA12_specialS =
-        "\1\0\5\uffff\1\2\1\1\21\uffff}>";
+        "\1\0\11\uffff\1\2\1\1\33\uffff}>";
     static final String[] DFA12_transitionS = {
-            "\11\12\2\11\2\12\1\11\22\12\1\11\1\1\1\6\4\12\1\7\7\12\1\10\12\5\7\12\7\4\1\2\22\4\3\12\1\3\1\4\1\12\32\4\uff85\12",
-            "",
-            "\1\14\3\uffff\1\15",
-            "\32\16\4\uffff\1\16\1\uffff\32\16",
-            "",
-            "",
-            "\0\20",
-            "\0\20",
-            "\1\21\4\uffff\1\22",
-            "",
+            "\11\16\2\15\2\16\1\15\22\16\1\15\1\16\1\12\4\16\1\13\7\16\1\14\12\11\1\6\6\16\32\10\3\16\1\7\1\10\1\16\4\10\1\2\7\10\1\5\4\10\1\1\10\10\1\3\1\16\1\4\uff82\16",
+            "\1\17",
+            "\1\21",
             "",
             "",
             "\1\24",
-            "\12\16\7\uffff\32\16\4\uffff\1\16\1\uffff\32\16",
+            "",
+            "\32\20\4\uffff\1\20\1\uffff\32\20",
+            "",
+            "",
+            "\0\27",
+            "\0\27",
+            "\1\30\4\uffff\1\31",
+            "",
+            "",
+            "\1\33",
+            "",
+            "\1\34",
+            "",
+            "",
+            "\1\35",
             "",
             "",
             "",
             "",
             "",
             "",
-            "\1\26",
+            "\1\36",
+            "\1\37",
+            "\1\40",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
+            "\1\42",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
             "",
-            "\1\27",
-            "\12\16\7\uffff\32\16\4\uffff\1\16\1\uffff\32\16",
+            "\1\44",
+            "",
+            "\1\45",
+            "\12\20\7\uffff\32\20\4\uffff\1\20\1\uffff\32\20",
             ""
     };
 
@@ -749,7 +848,7 @@ public class InternalBrainrotLexer extends Lexer {
             this.transition = DFA12_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__11 | T__12 | T__13 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | RULE_ID | RULE_INT | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -759,45 +858,53 @@ public class InternalBrainrotLexer extends Lexer {
                         int LA12_0 = input.LA(1);
 
                         s = -1;
-                        if ( (LA12_0=='!') ) {s = 1;}
+                        if ( (LA12_0=='r') ) {s = 1;}
 
-                        else if ( (LA12_0=='H') ) {s = 2;}
+                        else if ( (LA12_0=='e') ) {s = 2;}
 
-                        else if ( (LA12_0=='^') ) {s = 3;}
+                        else if ( (LA12_0=='{') ) {s = 3;}
 
-                        else if ( ((LA12_0>='A' && LA12_0<='G')||(LA12_0>='I' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='z')) ) {s = 4;}
+                        else if ( (LA12_0=='}') ) {s = 4;}
 
-                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 5;}
+                        else if ( (LA12_0=='m') ) {s = 5;}
 
-                        else if ( (LA12_0=='\"') ) {s = 6;}
+                        else if ( (LA12_0==':') ) {s = 6;}
 
-                        else if ( (LA12_0=='\'') ) {s = 7;}
+                        else if ( (LA12_0=='^') ) {s = 7;}
 
-                        else if ( (LA12_0=='/') ) {s = 8;}
+                        else if ( ((LA12_0>='A' && LA12_0<='Z')||LA12_0=='_'||(LA12_0>='a' && LA12_0<='d')||(LA12_0>='f' && LA12_0<='l')||(LA12_0>='n' && LA12_0<='q')||(LA12_0>='s' && LA12_0<='z')) ) {s = 8;}
 
-                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 9;}
+                        else if ( ((LA12_0>='0' && LA12_0<='9')) ) {s = 9;}
 
-                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=':' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||(LA12_0>='{' && LA12_0<='\uFFFF')) ) {s = 10;}
+                        else if ( (LA12_0=='\"') ) {s = 10;}
+
+                        else if ( (LA12_0=='\'') ) {s = 11;}
+
+                        else if ( (LA12_0=='/') ) {s = 12;}
+
+                        else if ( ((LA12_0>='\t' && LA12_0<='\n')||LA12_0=='\r'||LA12_0==' ') ) {s = 13;}
+
+                        else if ( ((LA12_0>='\u0000' && LA12_0<='\b')||(LA12_0>='\u000B' && LA12_0<='\f')||(LA12_0>='\u000E' && LA12_0<='\u001F')||LA12_0=='!'||(LA12_0>='#' && LA12_0<='&')||(LA12_0>='(' && LA12_0<='.')||(LA12_0>=';' && LA12_0<='@')||(LA12_0>='[' && LA12_0<=']')||LA12_0=='`'||LA12_0=='|'||(LA12_0>='~' && LA12_0<='\uFFFF')) ) {s = 14;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA12_7 = input.LA(1);
+                        int LA12_11 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_7>='\u0000' && LA12_7<='\uFFFF')) ) {s = 16;}
+                        if ( ((LA12_11>='\u0000' && LA12_11<='\uFFFF')) ) {s = 23;}
 
-                        else s = 10;
+                        else s = 14;
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA12_6 = input.LA(1);
+                        int LA12_10 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA12_6>='\u0000' && LA12_6<='\uFFFF')) ) {s = 16;}
+                        if ( ((LA12_10>='\u0000' && LA12_10<='\uFFFF')) ) {s = 23;}
 
-                        else s = 10;
+                        else s = 14;
 
                         if ( s>=0 ) return s;
                         break;

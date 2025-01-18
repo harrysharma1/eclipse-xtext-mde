@@ -4,8 +4,8 @@
 package harrysharma.brainrot.brainrot.impl;
 
 import harrysharma.brainrot.brainrot.BrainrotPackage;
-import harrysharma.brainrot.brainrot.Greeting;
 import harrysharma.brainrot.brainrot.Model;
+import harrysharma.brainrot.brainrot.Skibidi;
 
 import java.util.Collection;
 
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link harrysharma.brainrot.brainrot.impl.ModelImpl#getGreetings <em>Greetings</em>}</li>
+ *   <li>{@link harrysharma.brainrot.brainrot.impl.ModelImpl#getElements <em>Elements</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,14 +37,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getGreetings() <em>Greetings</em>}' containment reference list.
+   * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getGreetings()
+   * @see #getElements()
    * @generated
    * @ordered
    */
-  protected EList<Greeting> greetings;
+  protected EList<Skibidi> elements;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,13 +73,13 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public EList<Greeting> getGreetings()
+  public EList<Skibidi> getElements()
   {
-    if (greetings == null)
+    if (elements == null)
     {
-      greetings = new EObjectContainmentEList<Greeting>(Greeting.class, this, BrainrotPackage.MODEL__GREETINGS);
+      elements = new EObjectContainmentEList<Skibidi>(Skibidi.class, this, BrainrotPackage.MODEL__ELEMENTS);
     }
-    return greetings;
+    return elements;
   }
 
   /**
@@ -92,8 +92,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrainrotPackage.MODEL__GREETINGS:
-        return ((InternalEList<?>)getGreetings()).basicRemove(otherEnd, msgs);
+      case BrainrotPackage.MODEL__ELEMENTS:
+        return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,8 +108,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrainrotPackage.MODEL__GREETINGS:
-        return getGreetings();
+      case BrainrotPackage.MODEL__ELEMENTS:
+        return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -125,9 +125,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrainrotPackage.MODEL__GREETINGS:
-        getGreetings().clear();
-        getGreetings().addAll((Collection<? extends Greeting>)newValue);
+      case BrainrotPackage.MODEL__ELEMENTS:
+        getElements().clear();
+        getElements().addAll((Collection<? extends Skibidi>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -143,8 +143,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrainrotPackage.MODEL__GREETINGS:
-        getGreetings().clear();
+      case BrainrotPackage.MODEL__ELEMENTS:
+        getElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -160,8 +160,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case BrainrotPackage.MODEL__GREETINGS:
-        return greetings != null && !greetings.isEmpty();
+      case BrainrotPackage.MODEL__ELEMENTS:
+        return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
